@@ -1,3 +1,10 @@
+<?php
+    if(session_status() == PHP_SESSION_NONE)
+    {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +27,17 @@
         <ul class="nav-links">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="products.php">Products</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="products.php">Shop</a></li>
             <li><a href="#">Cart</a></li>
             <li><a href="#">Add Product</a></li>
-            <li><a href="#" class="btn login-btn">Login</a></li>
-            <li><a href="#" class="btn register-btn">Registration</a></li>
+            
+            <?php if(isset($_SESSION['loggedIn'])): ?>
+                <li><a href="logout.php" class="btn logout-btn">Logout</a></li>
+            <?php else:  ?>
+                <li><a href="login.php" class="btn login-btn">Login</a></li>
+                <li><a href="registration.php" class="btn register-btn">Registration</a></li>
+            <?php endif;  ?>
+
         </ul>
     </nav>
 

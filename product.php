@@ -18,6 +18,11 @@ if($result->num_rows == 0 )
 
 $product = $result ->fetch_assoc();
 
+if(session_status() == PHP_SESSION_NONE)
+{
+    session_start();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -39,5 +44,15 @@ $product = $result ->fetch_assoc();
             <p>Out of stock</p>
         <?php endif; ?>
         
+        <?php if(isset($_SESSION['loggedIn'])): ?>
+            <form action="cart.php" method="POST">
+                <input type="number" name="quantity" placeholder="Enter product quantity">
+                <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                <button>Add To Cart</button>
+            </form>
+        <?php else: ?>
+            <a href="login.php">Log in</a>
+        <?php endif; ?>
+
     </body>
 </html>

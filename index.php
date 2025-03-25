@@ -28,7 +28,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="products.php">Shop</a></li>
-            <li><a href="#">Add Product</a></li>
+            <li><a href="new_product.php">Add Product</a></li>
             
             <?php if(isset($_SESSION['loggedIn'])): ?>
                 <li><a href="logout.php" class="btn logout-btn">Logout</a></li>
@@ -68,6 +68,31 @@
             <img src="images/img_4.jpg" alt="Candle 4">
         </div>
     </div>
+    
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.540028869967!2d19.83164637596348!3d45.25709334723381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b1044e406fcbf%3A0x28145a6de9aec9e0!2z0JHRg9C70LXQstCw0YAg0L7RgdC70L7QsdC-0ZLQtdGa0LAgNTQsINCd0L7QstC4INCh0LDQtCAyMTEwMg!5e0!3m2!1ssr!2srs!4v1742911591444!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 All Rights Reserved | Created by Stefan Vujic</p>
+    </footer>
 
 </body>
 </html>

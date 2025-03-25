@@ -28,11 +28,11 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="products.php">Shop</a></li>
-            <li><a href="#">Cart</a></li>
             <li><a href="#">Add Product</a></li>
             
             <?php if(isset($_SESSION['loggedIn'])): ?>
                 <li><a href="logout.php" class="btn logout-btn">Logout</a></li>
+                <li><a href="my_cart.php">Cart</a></li>
             <?php else:  ?>
                 <li><a href="login.php" class="btn login-btn">Login</a></li>
                 <li><a href="registration.php" class="btn register-btn">Registration</a></li>

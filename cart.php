@@ -26,5 +26,6 @@ $result = $database->query("SELECT price FROM products WHERE id=$productId");
 $row = $result->fetch_assoc();
 $price =$row['price'];
 $price = $price * $quantity;
-var_dump($price);
+
+$database->query("INSERT INTO orders (product_id, user_id, price, quantity) VALUES ($productId, $userId, $price, $quantity)");
 

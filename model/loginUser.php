@@ -30,6 +30,7 @@ if($result->num_rows==1)
         }
         $_SESSION['loggedIn'] = true;
         $_SESSION['user_id'] = $user['id']; //u sesiju upisujemo koji je id od korisnika koji se ulogovao, a to dobijamo odavde $user = $result->fetch_assoc();
+        $_SESSION['role'] = $user['role'];
         header("Location:../index.php");
     }
     else

@@ -51,7 +51,7 @@ if(session_status() == PHP_SESSION_NONE)
                 <button>Add To Cart</button>
             </form>
         <?php else: ?>
-            <a href="login.php">Log in</a>
+            <a href="login.php">Log in if you want to add to cart</a>
         <?php endif; ?>
 
     </body>

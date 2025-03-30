@@ -29,3 +29,4 @@ $price = $price * $quantity;
 
 $database->query("INSERT INTO orders (product_id, user_id, price, quantity) VALUES ($productId, $userId, $price, $quantity)");
 
+header("Location: my_cart.php");

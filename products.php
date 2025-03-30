@@ -46,9 +46,9 @@
 
         </ul>
     </nav>
-
+        <h1 class="list-caption">LIST OF OUR CANDLES:</h1>
         <?php foreach($products as $product): ?>
-            <div>
+            <div class="single-product">
                 <h1><?= $product['name'] ?></h1>
                 <p><?= $product['description'] ?></p>
                 <p>Price:<?= $product['price'] ?> &euro;</p>

@@ -32,8 +32,9 @@ $orders = $result->fetch_all(MYSQLI_ASSOC);
     </head>
 
     <body>
+        <h1>My Cart:</h1>
         <?php if($result->num_rows==0):  ?>
-            <h1>Your Cart Is Empty</h1>
+            <h2>Your Cart Is Empty</h2>
 
         <?php else: ?>
             

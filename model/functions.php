@@ -54,6 +54,7 @@ function loginUser($database, $email, $password) {
             }
             $_SESSION['loggedIn'] = true;
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['role'] = $user['role'];
             header("Location: ../index.php");
             exit();
         } else {

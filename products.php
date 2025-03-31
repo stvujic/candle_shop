@@ -31,10 +31,14 @@
     <nav>
         <div class="logo">LOGO</div>
         <ul class="nav-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.php#about">About Us</a></li>
+            <li><a href="index.php#contact">Contact</a></li>
             <li><a href="products.php">Shop</a></li>
-            <li><a href="#">Add Product</a></li>
+            <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
+                <li><a href="new_product.php">Add Product</a></li>
+                <li><a href="user_search.php">User Search</a></li>     
+            <?php endif; ?> 
+            
             
             <?php if(isset($_SESSION['loggedIn'])): ?>
                 <li><a href="logout.php" class="btn logout-btn">Logout</a></li>

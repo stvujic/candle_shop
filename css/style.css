@@ -439,3 +439,134 @@ footer p a:hover {
 .registration-form button:hover {
     background: #218838;
 }
+
+/* Kontejner za korpu */
+.cart-container {
+    width: 60%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Naslov */
+.cart-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Prazna korpa */
+.empty-cart {
+    color: #888;
+    font-size: 20px;
+}
+
+/* Lista proizvoda u korpi */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Pojedinačni proizvod u korpi */
+.cart-item {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tekst unutar korpe */
+.cart-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Podebljan tekst */
+.cart-item strong {
+    color: #555;
+}
+
+/* Kontejner za proizvod */
+.product-container {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Naslov proizvoda */
+.product-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Opis proizvoda */
+.product-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Cena i količina */
+.product-price, .product-quantity {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Poruka ako je proizvod rasprodat */
+.out-of-stock {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Forma za dodavanje u korpu */
+.add-to-cart-form {
+    margin-top: 20px;
+}
+
+/* Input za količinu */
+.add-to-cart-form input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dugme za dodavanje u korpu */
+.add-to-cart-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+}
+
+/* Link ka loginu */
+.login-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

@@ -28,28 +28,8 @@
     </head>
 
     <body>
-    <nav>
-        <div class="logo">LOGO</div>
-        <ul class="nav-links">
-            <li><a href="index.php#about">About Us</a></li>
-            <li><a href="index.php#contact">Contact</a></li>
-            <li><a href="products.php">Shop</a></li>
-            <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
-                <li><a href="new_product.php">Add Product</a></li>
-                <li><a href="user_search.php">User Search</a></li>     
-            <?php endif; ?> 
-            
-            
-            <?php if(isset($_SESSION['loggedIn'])): ?>
-                <li><a href="logout.php" class="btn logout-btn">Logout</a></li>
-                <li><a href="my_cart.php">Cart</a></li>
-            <?php else:  ?>
-                <li><a href="login.php" class="btn login-btn">Login</a></li>
-                <li><a href="registration.php" class="btn register-btn">Registration</a></li>
-            <?php endif;  ?>
+        <?php require_once "navigation/navbar.php"; ?>
 
-        </ul>
-    </nav>
         <h1 class="list-caption">LIST OF OUR CANDLES:</h1>
         <?php foreach($products as $product): ?>
             <div class="single-product">

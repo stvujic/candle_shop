@@ -1,19 +1,13 @@
 <?php
 
+require_once "model/functions.php";
+
 if(session_status() == PHP_SESSION_NONE)
 {
     session_start();
 }
 
-if(!isset($_POST['product_id']) || empty($_POST['product_id']))
-{
-    die("You must enter product ID");
-}
-
-if(!isset($_POST['quantity']) || empty($_POST['quantity']))
-{
-    die("You must enter product quantity");
-}
+validateInput(['product_id', 'quantity'], $_POST);
 
 require_once "model/database.php";
 

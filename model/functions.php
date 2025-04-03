@@ -77,7 +77,7 @@ function registerUser($database, $email, $password) {
         die("User with this email already exists! Register with another email!");
     }
 
-    // Hash password-a
+    // Hash password
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
     // Ubacivanje korisnika u bazu
